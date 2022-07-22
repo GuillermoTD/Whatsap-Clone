@@ -1,12 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./components/Login";
+import LoginPage from "./Pages/LoginPage";
+import MainPage from "./Pages/MainPage";
 
 export default function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Login />} />
+            <Route index path="login" element={<LoginPage />} />
+            <Route path="/" element={<MainPage />} />
         </Routes>
       </BrowserRouter>
     </div>
