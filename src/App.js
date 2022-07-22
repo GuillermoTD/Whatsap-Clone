@@ -7,8 +7,8 @@ export default function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-            <Route index path="login" element={<LoginPage />} />
-            <Route path="/" element={<MainPage />} />
+          <Route path="/" element={<MainPage />} />
+          <Route path="login" element={<LoginPage />} />
         </Routes>
       </BrowserRouter>
     </div>
