@@ -9,16 +9,16 @@ const LeftSide = () => {
         </div>
 
         <div className="LeftSide_Header_FunctionsIcons">
-          <i class="fas fa-circle-notch"></i>
-          <i class="fa-solid fa-message-plus"></i>
-          <i class="fas fa-ellipsis-v"></i>
+          <i className="fas fa-circle-notch"></i>
+          <i class="fa-solid fa-plus"></i>
+          <i className="fas fa-ellipsis-v"></i>
         </div>
       </div>
 
       <div className="LeftSide_SearchBar">
         <div className="LeftSide_SearchBar_Input">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          {/* <i class="fa-solid fa-arrow-left"></i> */}
+          <i className="fa-solid fa-magnifying-glass"></i>
+          {/* <i className="fa-solid fa-arrow-left"></i> */}
           <input type="text" placeholder="Search or start new chat" />
         </div>
       </div>
@@ -30,8 +30,13 @@ const LeftSide = () => {
           </div>
           <div className="LeftSide_ChatList_ChatItem_Box2">
             <div className="LeftSide_ChatList_ChatItem_Box2_ChatTitle">
+<<<<<<< HEAD
               <span>Fulanito</span>
               <span className="LeftSide_ChatList_ChatItem_Box2_ChatTitle_Date">12:05pm</span>
+=======
+              <p>Fulanito</p>
+              <span>12:05pm</span>
+>>>>>>> 8fb53473a78c132176af311aac0c23902edf9b35
             </div>
             <div className="LeftSide_ChatList_ChatItem_Box2_ChatMessage">
               Hola
