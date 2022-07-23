@@ -2,7 +2,7 @@ import React from "react";
 import LeftSide from "../components/LeftSide";
 import RightSide from "../components/RightSide";
 
-const MainPage = () => {
+const MainPage = ({setIsAuth}) => {
   return (
     <div className="MainPage">
       <div className="Main">
