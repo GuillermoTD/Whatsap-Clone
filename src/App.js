@@ -9,6 +9,7 @@ export default function App() {
 const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"))
 
 const signUserOut = ()=>{
+
 signOut(auth).then(()=>{
   localStorage.clear()
   setIsAuth(false)
@@ -20,8 +21,15 @@ signOut(auth).then(()=>{
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/" element={<MainPage 
+          isAuth={isAuth}
+          signUserOut={signUserOut}
+          />}
+          />
+          <Route path="/login" element={<LoginPage 
+          isAuth={isAuth}
+          />}
+          />
         </Routes>
       </BrowserRouter>
     </div>

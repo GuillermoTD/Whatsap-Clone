@@ -3,9 +3,8 @@ import {signOut} from "firebase/auth";
 import {auth} from "../FirebaseConfig"
 import { useNavigate } from "react-router-dom";
 
-const LeftSide = () => {
+const LeftSide = ({isAuth}) => {
  
-
 
   return (
     <div className="LeftSide">
