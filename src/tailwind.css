@@ -31,6 +31,7 @@ i{
 .Login_Icon {
   @apply w-[4.5rem] h-[4.5rem];
 }
+
 .Login_Title {
   @apply text-[2rem] font-medium mb-4;
 }
@@ -58,11 +59,13 @@ i{
 
 .LeftSide{
     @apply bg-slate-50 w-[35%] h-full flex flex-col items-center;
+    min-width:20rem;
 }
+
 .LeftSide_Header{
     @apply bg-slate-100 w-full h-[4rem] flex items-center justify-between px-4;
-
 }
+
 .LeftSide_Header_FunctionsIcons{
     @apply flex gap-4
 }
@@ -80,6 +83,7 @@ i{
 .LeftSide_SearchBar_Input i{
     @apply text-slate-500;
 }
+
 .LeftSide_SearchBar_Input input{
     @apply text-slate-500 py-[0.3rem] px-[1.9rem];
     background:none;
@@ -88,9 +92,27 @@ i{
 .LeftSide_ChatList{
     @apply overflow-scroll w-full overflow-x-hidden h-full;
 }
+
 .LeftSide_ChatList_ChatItem{
-    @apply w-full h-[4rem] flex items-center gap-2 px-[1rem];
-    border-top: 1px solid #0001;
+    @apply  w-full h-[4rem] flex items-center gap-4 px-[0.7rem];
+    border-bottom: 1px solid #0001;
+}
+
+.LeftSide_ChatList_ChatItem_Box1{
+  @apply bg-red-500 w-[3.8rem] h-[3.1rem] flex items-center justify-center 
+            rounded-3xl cursor-pointer object-cover;
+}
+
+.LeftSide_ChatList_ChatItem_Box2{
+  @apply flex flex-col w-full;
+}
+
+.LeftSide_ChatList_ChatItem_Box2_ChatTitle{
+  @apply w-full flex items-center justify-between
+}
+
+.LeftSide_ChatList_ChatItem_Box2_ChatTitle_Date{
+  @apply text-[0.8rem] text-slate-400;
 }
 
 .RightSide{

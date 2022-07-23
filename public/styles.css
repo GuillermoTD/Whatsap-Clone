@@ -670,6 +670,7 @@ i{
   align-items: center;
   --tw-bg-opacity: 1;
   background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+  min-width:20rem;
 }
 
 .LeftSide_Header {
@@ -746,10 +747,42 @@ i{
   height: 4rem;
   width: 100%;
   align-items: center;
-  gap: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-top: 1px solid #0001;
+  gap: 1rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  border-bottom: 1px solid #0001;
+}
+
+.LeftSide_ChatList_ChatItem_Box1 {
+  display: flex;
+  height: 3.1rem;
+  width: 3.8rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+  object-fit: cover;
+}
+
+.LeftSide_ChatList_ChatItem_Box2 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.LeftSide_ChatList_ChatItem_Box2_ChatTitle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.LeftSide_ChatList_ChatItem_Box2_ChatTitle_Date {
+  font-size: 0.8rem;
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 
 .RightSide {

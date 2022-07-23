@@ -25,24 +25,19 @@ const LeftSide = () => {
 
       <div className="LeftSide_ChatList">
         <div className="LeftSide_ChatList_ChatItem">
-            <div className="LeftSide_ChatList_ChatItem_Box1">
+          <div className="LeftSide_ChatList_ChatItem_Box1">
             <img src="" alt="us" />
+          </div>
+          <div className="LeftSide_ChatList_ChatItem_Box2">
+            <div className="LeftSide_ChatList_ChatItem_Box2_ChatTitle">
+              <span>Fulanito</span>
+              <span className="LeftSide_ChatList_ChatItem_Box2_ChatTitle_Date">12:05pm</span>
             </div>
-            <div className="LeftSide_ChatList_ChatItem_Box2">
-                <div className="LeftSide_ChatList_ChatItem_Box2_ChatTitle">
-                    <p>Fulanito</p>
-                    <span>12:05pm</span>
-                </div>
-                <div className="LeftSide_ChatList_ChatItem_Box2_ChatMessage">Hola</div>
-
+            <div className="LeftSide_ChatList_ChatItem_Box2_ChatMessage">
+              Hola
             </div>
+          </div>
         </div>
-        
-      
-       
-       
-     
-        
       </div>
     </div>
   );
