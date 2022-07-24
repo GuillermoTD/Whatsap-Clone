@@ -28,6 +28,7 @@ signOut(auth).then(()=>{
           />
           <Route path="/login" element={<LoginPage 
           isAuth={isAuth}
+          setIsAuth={setIsAuth}
           />}
           />
         </Routes>

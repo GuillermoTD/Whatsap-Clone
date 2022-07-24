@@ -4,24 +4,26 @@ import { Link, useNavigate } from "react-router-dom";
 import { signInWithPopup,  GoogleAuthProvider } from "firebase/auth";
 import {auth} from "../FirebaseConfig"
 
-const LoginPage = ({isAuth}) => {
+const LoginPage = ({isAuth, setIsAuth}) => {
   const navigate = useNavigate()
 
 
   // Signin with Google////
-  const sighInWithGoogle = ({setIsAuth})=>{
+  const sighInWithGoogle = ()=>{
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
     .then(()=>{
       localStorage.setItem("isAuth", true);
       setIsAuth(true);
       navigate("/")
+     
     })
     .catch((err)=>{
       console.log(err)
     })
   }
   
+
 
 
 

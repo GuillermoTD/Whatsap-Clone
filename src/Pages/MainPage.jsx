@@ -21,7 +21,7 @@ navigate("/login")
         <LeftSide />
         <RightSide />
       </div>
-    </div> : "Login"
+    </div> : null
     } 
     </>
   );
