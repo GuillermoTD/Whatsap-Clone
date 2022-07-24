@@ -1,7 +1,7 @@
 import WhatsapIcon from "../img/whatsapp.svg"
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { signInWithPopup,  GoogleAuthProvider } from "firebase/auth";
+import { signInWithPopup, getAuth, GoogleAuthProvider } from "firebase/auth";
 import {auth} from "../FirebaseConfig"
 
 const LoginPage = ({isAuth, setIsAuth}) => {
@@ -22,6 +22,7 @@ const LoginPage = ({isAuth, setIsAuth}) => {
       console.log(err)
     })
   }
+  
   
 
 

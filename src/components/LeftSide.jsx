@@ -1,10 +1,22 @@
 import React, { useState } from "react";
-import {signOut} from "firebase/auth";
+import {signOut,getAuth} from "firebase/auth";
 import {auth} from "../FirebaseConfig"
 import { useNavigate } from "react-router-dom";
 
 const LeftSide = ({isAuth}) => {
- 
+ const navigate = useNavigate()
+
+
+ function logOut(){
+const auth = getAuth();
+signOut(auth).then(() => {
+  window.localStorage.clear();
+  navigate("/login")
+  console.log("Sign-out successful")
+}).catch((error) => {
+  console.log(error)
+});
+}
 
   return (
     <div className="LeftSide">
@@ -17,6 +29,7 @@ const LeftSide = ({isAuth}) => {
           <i className="fas fa-circle-notch"></i>
           <i className="fa-solid fa-plus"></i>
           <i className="fas fa-ellipsis-v"></i>
+          <button onClick={()=>logOut()}>Log Out</button>
         </div>
       </div>
 
