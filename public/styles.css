@@ -549,12 +549,12 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-*{
-  outline:none;
+* {
+  outline: none;
 }
 
-i{
-  cursor:pointer;
+i {
+  cursor: pointer;
 }
 
 .App {
@@ -670,10 +670,11 @@ i{
   align-items: center;
   --tw-bg-opacity: 1;
   background-color: rgb(248 250 252 / var(--tw-bg-opacity));
-  min-width:20rem;
+  min-width: 20rem;
 }
 
 .LeftSide_Header {
+  position: relative;
   display: flex;
   height: 4rem;
   width: 100%;
@@ -683,6 +684,28 @@ i{
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.LeftSide_Header_DropDown {
+  display: none;
+  transition: 3s;
+}
+
+.IsOpen_DropDown {
+  display: block;
+  position: absolute;
+  top: 80%;
+  right: 0.5rem;
+  height: 7rem;
+  width: 8rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: rgb(148 163 184 / 0.5);
+  --tw-shadow: var(--tw-shadow-colored);
+  transition: 3s;
 }
 
 .LeftSide_Header_FunctionsIcons {
@@ -700,7 +723,7 @@ i{
   background-color: rgb(248 250 252 / var(--tw-bg-opacity));
   padding-left: 1rem;
   padding-right: 1rem;
-  border:1px solid #0001;
+  border: 1px solid #0001;
 }
 
 .LeftSide_SearchBar_Input {
@@ -732,7 +755,7 @@ i{
   padding-right: 1.9rem;
   --tw-text-opacity: 1;
   color: rgb(100 116 139 / var(--tw-text-opacity));
-  background:none;
+  background: none;
 }
 
 .LeftSide_ChatList {
@@ -795,4 +818,89 @@ i{
   background-color: rgb(147 197 253 / var(--tw-bg-opacity));
 }
 
+.RightSide_Header {
+  display: flex;
+  height: 4rem;
+  width: 100%;
+  align-items: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
 
+.RightSide_Header_UserDescription {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 1rem;
+}
+
+.RightSide_Header_UserDescription_Image {
+  height: 3rem;
+  width: 3rem;
+  overflow: hidden;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+  object-fit: cover;
+}
+
+.RightSide_ChatBox {
+  height: 100%;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+  background-image: url("/img/bg.jpg");
+  /* background: url("./img/bg.jpg"); */
+}
+
+.RightSide_Footer {
+  display: flex;
+  height: 4rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.RightSide_Footer i {
+  font-size: 1.2rem;
+}
+
+.RightSide_Footer_ChatFunctions {
+  display: flex;
+  height: 2.4rem;
+  width: 5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.RightSide_Footer_Input {
+  display: flex;
+  height: 2.3rem;
+  width: 90%;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+}
+
+.RightSide_Footer_Input input {
+  height: 100%;
+  width: 100%;
+  padding-left: 1rem;
+}
+
+.RightSide_Footer_Microphone {
+  display: flex;
+  width: 2rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

@@ -1,6 +1,18 @@
-import React from "react";
+import {useState} from "react";
 
 const LeftSide = () => {
+  const [dropdown, setDropdown] = useState(false)
+
+  const handleDropdown = ()=>{
+    const Dropdown = document.querySelector(".LeftSide_Header_DropDown ")
+    setDropdown(!dropdown)
+    
+    if(dropdown){
+      Dropdown.classList.add("IsOpen_DropDown")
+    }else{
+      Dropdown.classList.remove("IsOpen_DropDown")
+    }
+  }
   return (
     <div className="LeftSide">
       <div className="LeftSide_Header">
@@ -10,8 +22,11 @@ const LeftSide = () => {
 
         <div className="LeftSide_Header_FunctionsIcons">
           <i className="fas fa-circle-notch"></i>
-          <i class="fa-solid fa-plus"></i>
-          <i className="fas fa-ellipsis-v"></i>
+          <i className="fa-solid fa-plus"></i>
+          <i className="fa-solid fa-ellipsis" onClick={()=>handleDropdown()}></i>
+          <div  className="LeftSide_Header_DropDown">
+            <span>Log Out</span>
+          </div>
         </div>
       </div>
 
