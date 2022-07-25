@@ -24,6 +24,8 @@ useEffect(()=>{
 },[]);
 console.log(userinfo)
 
+
+////////// Logout function/////////
  function logOut(){
 const auth = getAuth();
 signOut(auth)
@@ -61,6 +63,8 @@ console.log(auth)
         </div>
       </div>
 
+
+
 {userinfo.map((userData)=>{
   return <div key={userData.name.id} className="LeftSide_ChatList">
         <div className="LeftSide_ChatList_ChatItem">
@@ -78,9 +82,11 @@ console.log(auth)
           </div>
         </div>
       </div>
-
 })
       
+
+
+
 
 }
     </div>
