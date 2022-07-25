@@ -1,5 +1,5 @@
 import React from "react";
-import UserImage from "../img/perro.jpg";
+import UserImage from "../img/dog.jpg";
 
 const RightSide = () => {
   return (
@@ -20,13 +20,13 @@ const RightSide = () => {
 
       <div className="RightSide_Footer">
         <div className="RightSide_Footer_ChatFunctions">
-            <i class="fa-regular fa-face-laugh"></i>
-            <i class="fa-solid fa-paperclip"></i>
+            <i className="fa-regular fa-face-laugh"></i>
+            <i className="fa-solid fa-paperclip"></i>
         </div>
         <div className="RightSide_Footer_Input">
           <input type="text" placeholder="Type a Message" />
         </div>
-        <i class="fa-solid fa-microphone RightSide_Footer_Microphone"></i>
+        <i className="fa-solid fa-microphone RightSide_Footer_Microphone"></i>
       </div>
     </div>
   );
