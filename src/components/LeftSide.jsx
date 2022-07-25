@@ -40,6 +40,23 @@ signOut(auth)
 }
 console.log(auth)
 
+
+
+
+
+  const [dropdown, setDropdown] = useState(false)
+
+  const handleDropdown = ()=>{
+    const Dropdown = document.querySelector(".LeftSide_Header_DropDown ")
+    setDropdown(!dropdown)
+    
+    if(dropdown){
+      Dropdown.classList.add("IsOpen_DropDown")
+    }else{
+      Dropdown.classList.remove("IsOpen_DropDown")
+    }
+  }
+
   return (
     <div className="LeftSide">
       <div className="LeftSide_Header">
@@ -49,9 +66,12 @@ console.log(auth)
 
         <div className="LeftSide_Header_FunctionsIcons">
           <i className="fas fa-circle-notch"></i>
-          <i className="fa-solid fa-plus"></i>
-          <i className="fas fa-ellipsis-v"></i>
-          <button onClick={()=>logOut()}>Log Out</button>
+
+          <i className="fa-solid fa-ellipsis" onClick={()=>handleDropdown()}></i>
+          <div  className="LeftSide_Header_DropDown">
+            <button onClick={()=>logOut()}>Log Out</button>
+          </div>
+
         </div>
       </div>
 
@@ -73,8 +93,15 @@ console.log(auth)
           </div>
           <div className="LeftSide_ChatList_ChatItem_Box2">
             <div className="LeftSide_ChatList_ChatItem_Box2_ChatTitle">
+
               <span>{userData.name.name}</span>
               <span className="LeftSide_ChatList_ChatItem_Box2_ChatTitle_Date">12:05pm</span>
+
+              <span>Fulanito</span>
+              <span className="LeftSide_ChatList_ChatItem_Box2_ChatTitle_Date">
+                12:05pm
+              </span>
+
             </div>
             <div className="LeftSide_ChatList_ChatItem_Box2_ChatMessage">
               Hola
@@ -83,14 +110,9 @@ console.log(auth)
         </div>
       </div>
 })
-      
-
-
-
-
 }
     </div>
-  );
-};
+)};
+
 
 export default LeftSide;

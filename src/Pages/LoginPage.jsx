@@ -1,12 +1,25 @@
 import WhatsapIcon from "../img/whatsapp.svg"
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
 import { signInWithPopup, getAuth, GoogleAuthProvider } from "firebase/auth";
 import {auth} from "../FirebaseConfig"
 import { db } from "../firebase";
 import {addDoc, collection} from "firebase/firestore"
 
 const LoginPage = ({isAuth, setIsAuth}) => {
+
+
+
+
+
+
+
+
+
+
+
+
   const navigate = useNavigate()
 
 
@@ -25,6 +38,7 @@ const LoginPage = ({isAuth, setIsAuth}) => {
     })
   }
 
+
   const userInfoRef = collection(db, "users")
   const userInfo = async()=>{
 await addDoc(userInfoRef, {name: {name:auth.currentUser.displayName, id: auth.currentUser.uid, photo: auth.currentUser.photoURL}})
@@ -36,6 +50,7 @@ await addDoc(userInfoRef, {name: {name:auth.currentUser.displayName, id: auth.cu
   
   
   
+
 
 
 
